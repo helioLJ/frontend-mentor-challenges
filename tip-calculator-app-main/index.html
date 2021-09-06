@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <script src="js/script.js" defer></script>
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <img class="logo" src="/assets/images/logo.svg" alt="Logo Splitter" title="Logo Splitter">
+  <div class="container">
+    <div class="calculator">
+
+      <div class="calculator__bill">
+        <h2 class="field__title">Bill</h2>
+        <div class="field">
+          <img class="field__icon" src="/assets/images/icon-dollar.svg">
+          <input id="bill" class="field__input" type="text" name="bill" placeholder="0">
+        </div>
+      </div>
+
+      <div class="calculator__tp">
+        <h2 class="field__title">Select Tip %</h2>
+        <fieldset class="tp__fieldset">
+          <button class="tp__fieldset___button">5%</button>
+          <button class="tp__fieldset___button">10%</button>
+          <button class="tp__fieldset___button">15%</button>
+          <button class="tp__fieldset___button">25%</button>
+          <button class="tp__fieldset___button">50%</button>
+          <input class="tp__fieldset___input" type="text" placeholder="Custom">
+        </fieldset>
+      </div>
+
+      <div class="calculator__NoP">
+        <h2 class="field__title">Number of people</h2>
+        <div class="field">
+          <img class="field__icon" src="/assets/images/icon-person.svg">
+          <input id="num-of-people" class="field__input" type="text" name="num-of-people" placeholder="0">
+        </div>
+      </div>
+    </div>
+
+    <div class="result">
+      <section class="result__tip-amount">
+        <div>
+          <h3 class="result__title">Tip Amount</h3>
+          <p class="result__text">/ person</p>
+        </div>
+        <span class="result__tip-amount___value">0</span>
+      </section>
+      <section class="result__total">
+        <div>
+          <h3 class="result__title">Total</h3>
+          <p class="result__text">/ person</p>
+        </div>
+        <span class="result__tip-amount___value">0</span>
+      </section>
+      <button class="result__button">Reset</button>
+    </div>
+
+  </div>
+
+  <!--
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  -->
+</body>
+</html>

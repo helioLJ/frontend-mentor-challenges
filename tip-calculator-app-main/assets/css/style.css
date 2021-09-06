@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+}
+
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-cyan2: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --light-grayish-cyan2: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: 25px;
+    display: flex;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    height: 400px;
+    max-width: 1000px;
+    padding: 2.5rem;
+}
+
+.calculator {
+    width: 50%;
+    color: var(--dark-grayish-cyan);
+    margin-right: 3rem;
+}
+
+.calculator div {
+    margin-bottom: 3rem;
+}
+
+.calculator__bill {
+
+}
+
+.field {
+    position: relative;
+}
+
+.field__title {
+    margin-bottom: .5rem;
+}
+
+.field__icon {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.field__input {
+    background-color: var(--light-grayish-cyan2);
+    border-radius: 2px;
+    border: none;
+    color: var(--dark-grayish-cyan2);
+    text-align: right;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.calculator__tp {
+
+}
+
+.tp__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tp__fieldset___button {
+    background-color: var(--very-dark-cyan);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    width: 30%;
+    margin: 1.5%;
+}
+
+.tp__fieldset___input {
+    background-color: var(--light-grayish-cyan2);
+    color: var(--dark-grayish-cyan2);
+    font-weight: 700;
+    width: 30%;
+    margin: 1.5%;
+
+}
+
+.tp__fieldset___input::placeholder {
+    
+}
+
+.result {
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    width: 50%;
+    padding: 2rem;
+}
+
+.
