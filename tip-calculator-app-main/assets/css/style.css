@@ -35,85 +35,202 @@ body {
     display: flex;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
-    height: 400px;
+    height: 430px;
     max-width: 1000px;
-    padding: 2.5rem;
+    padding: 2rem;
 }
 
-.calculator {
-    width: 50%;
+.title {
     color: var(--dark-grayish-cyan);
-    margin-right: 3rem;
-}
-
-.calculator div {
-    margin-bottom: 3rem;
-}
-
-.calculator__bill {
-
-}
-
-.field {
-    position: relative;
-}
-
-.field__title {
     margin-bottom: .5rem;
 }
 
-.field__icon {
+.calc {
+    width: 50%;
+    margin-right: 3rem;
+}
+
+.calc__bill, .calc__tp {
+    margin-bottom: 3rem;
+}
+
+.calc__input-container {
+    position: relative;
+}
+
+.calc__input-container___icon {
     position: absolute;
-    top: 10px;
+    top: 13px;
     left: 15px;
 }
 
-.field__input {
+.calc__input-container___input {
     background-color: var(--light-grayish-cyan2);
-    border-radius: 2px;
-    border: none;
-    color: var(--dark-grayish-cyan2);
+    border-radius: 4px;
+    border: 2px solid var(--white);
+    color: var(--very-dark-cyan);
+    font-weight: 700;
     text-align: right;
     width: 100%;
     padding-right: 10px;
+    outline: none;
 }
 
-.calculator__tp {
-
+.calc__input-container___input:focus, .calc__buttons___input:focus {
+    border: 2px solid var(--strong-cyan);
 }
 
-.tp__fieldset {
+.calc__buttons {
     display: flex;
     flex-wrap: wrap;
 }
 
-.tp__fieldset___button {
+.calc__buttons___button {
     background-color: var(--very-dark-cyan);
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
     color: var(--white);
-    width: 30%;
-    margin: 1.5%;
-}
-
-.tp__fieldset___input {
-    background-color: var(--light-grayish-cyan2);
-    color: var(--dark-grayish-cyan2);
     font-weight: 700;
+    cursor: pointer;
+    height: 45px;
     width: 30%;
     margin: 1.5%;
-
+    transition: background-color, 0.4s;
 }
 
-.tp__fieldset___input::placeholder {
-    
+.calc__buttons___button:hover {
+    background-color: var(--light-grayish-cyan);
+}
+
+.calc__buttons___input {
+    background-color: var(--light-grayish-cyan2);
+    border: 2px solid var(--white);
+    border-radius: 7px;
+    color: var(--very-dark-cyan);
+    font-weight: 700;
+    height: 45px;
+    width: 30%;
+    margin: 1.5%;
+    outline: none;
+    text-align: right;
+}
+
+
+.calc__buttons___input::placeholder {
+    text-align: center;
+}
+
+.people__title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.people__error {
+    color: red;
+    font-weight: 400;
+}
+
+.input__error {
+    border-color: red;
 }
 
 .result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--very-dark-cyan);
+    border-radius: 20px;
     color: var(--white);
     width: 50%;
     padding: 2rem;
 }
 
-.
+.result__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.result__title {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.result__text {
+    font-weight: 500;
+    color: var(--dark-grayish-cyan);
+}
+
+.result__tip-amount___value {
+    color: var(--strong-cyan);
+    font-size: 2.6rem;
+}
+
+.result__button {
+    background-color: var(--strong-cyan);
+    border: none;
+    border-radius: 5px;
+    color: var(--very-dark-cyan);
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: .5rem;
+    text-transform: uppercase;
+    transition: background-color, 0.4s;
+}
+
+.result__button:hover {
+    background-color: var(--light-grayish-cyan);
+}
+
+.result__button:active {
+    transform: translate(3px, 3px);
+    opacity: 0.8;
+}
+
+.hidden {
+    display: none;
+}
+
+.activeButton {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 740px) {
+    .logo {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .calc, .result {
+        margin: 0;
+        width: 100%;
+    }
+
+    .result {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .calc__buttons___button, .calc__buttons___input {
+        width: calc(50% - 2%);
+        margin: 1%;
+    }
+
+    .result {
+        padding: 2rem 1rem;
+    }
+
+    .result__tip-amount___value {
+        font-size: 2rem;
+    }
+}
